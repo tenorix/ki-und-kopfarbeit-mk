@@ -1,0 +1,7 @@
+site_name: ki-und-kopfarbeit
+theme:
+  name: material  # Change to other themes if needed
+
+nav:
+  - Home: index.md
+
