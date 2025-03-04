@@ -6,4 +6,5 @@ theme:
 
 nav:
   - Home: index.md
+  - Fooo: foo.md
 
