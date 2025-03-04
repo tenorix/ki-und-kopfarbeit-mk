@@ -7,5 +7,6 @@ theme:
 nav:
   - Home: index.md
   - Chatbots richtig nutzen: chatbots-richtig-nutzen.md
-  - Fooo: foo.md
+  - Lernen mit dem Chatbot: lernen-mit-dem-chatbot.md
+  - Wie funktioniert ein Chatbot: wie-funktioniert-ein-chatbot-llm.md
 
