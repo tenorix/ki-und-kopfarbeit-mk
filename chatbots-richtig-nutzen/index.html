@@ -1,0 +1,851 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../lernen-mit-dem-chatbot/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Chatbots richtig nutzen - ki-und-kopfarbeit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#konversationen-in-naturlicher-sprache" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ki-und-kopfarbeit" class="md-header__button md-logo" aria-label="ki-und-kopfarbeit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ki-und-kopfarbeit
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chatbots richtig nutzen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ki-und-kopfarbeit" class="md-nav__button md-logo" aria-label="ki-und-kopfarbeit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ki-und-kopfarbeit
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chatbots richtig nutzen
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chatbots richtig nutzen
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#konversationen-in-naturlicher-sprache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Konversationen in natürlicher Sprache
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neues-thema-neuer-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neues Thema, neuer Chat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatisierte-texterstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatisierte Texterstellung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erstellung-von-texten-fur-eine-zielgruppe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erstellung von Texten für eine Zielgruppe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#umformulieren-und-neustrukturierung-eigener-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Umformulieren und Neustrukturierung eigener Texte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strukturierte-ausgabe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strukturierte Ausgabe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback-und-korrektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedback und Korrektur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extrahieren-und-filtern-von-informationen-aus-texten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extrahieren und Filtern von Informationen aus Texten
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weltwissen-erklarung-von-komplexen-konzepten-und-zusammenhangen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weltwissen: Erklärung von komplexen Konzepten und Zusammenhängen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ergebnisoffene-fragen-statt-suggestivfragen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ergebnisoffene Fragen statt Suggestivfragen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faktencheck" class="md-nav__link">
+    <span class="md-ellipsis">
+      Faktencheck
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rollenspiele" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rollenspiele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vorgehensmodelle-im-dialog-chatgpt-stellt-dir-fragen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vorgehensmodelle im Dialog - ChatGPT stellt dir Fragen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lernen-mit-dem-chatbot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lernen mit dem Chatbot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wie-funktioniert-ein-chatbot-llm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wie funktioniert ein Chatbot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../impressum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Impressum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datenschutz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datenschutzerklärung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Chatbots richtig nutzen</h1>
+
+<h2 id="konversationen-in-naturlicher-sprache">Konversationen in natürlicher Sprache</h2>
+<blockquote>
+<p>ChatGPT hat die Fähigkeit, menschenähnliche Konversationen zu führen. Das bedeutet, dass die KI nicht nur einzelne Fragen beantwortet, sondern sich an den Kontext eines Gesprächs erinnert, natürliche Ausdrucksweisen versteht und eine fließende, intuitive Interaktion ermöglicht. Dazu gehört</p>
+<ul>
+<li>Kontextbewusstsein: ChatGPT bezieht den Chat-Verlauf in die Antworten ein un kann so eine kohärente Unterhaltung aufrechterhalten.</li>
+<li>Semantisches Verständnis: Die KI erfasst nicht nur Schlüsselwörter, sondern auch Bedeutungsebenen und Nuancen der Sprache.</li>
+<li>Mehrsprachigkeit: Neben Deutsch und Englisch kann die KI auch andere Sprachen verstehen und verwenden.</li>
+</ul>
+</blockquote>
+<p>ChatGPT kann komplexe Anweisungen verstehen und präzise darauf reagieren. Doch es geht nicht nur um Wörter – es geht um Bedeutung. Aber sie kann nur interpretieren, was du tatsächlich sagst.</p>
+<p>Kommunikation mit ChatGPT ist wie das Einweisen eines neuen Assistenten am ersten Tag. Er bringt Fähigkeiten mit, aber kein Wissen über dich. Ohne klare Anweisungen bleibt nur Raten – und Raten führt selten zu präzisen Ergebnissen.</p>
+<p>ChatGPT kann keine Gedanken lesen. Wenn du gute Antworten willst, musst du Klarheit schaffen. Dein Assistent braucht nicht nur eine Anweisung – er braucht Kontext.</p>
+<p>Es gibt viele Vorlagen im Internet, die erklären, wie man „richtige“ Prompts schreibt. Doch es gibt kein absolutes Richtig oder Falsch. Es gibt nur hilfreiche und weniger hilfreiche Anfragen. Du musst nicht alles in eine einzige Anweisung packen. Ergänze Informationen im Dialog, Schritt für Schritt – so kannst du die Qualität der Antworten gezielt verbessern.</p>
+<p>Wichtige Punkte für effektive Prompts:</p>
+<ul>
+<li>
+<p>Einfache, klare Sprache: Qualität vor Quantität.</p>
+</li>
+<li>
+<p>Hintergrund liefern: Erkläre die Situation, bevor du die Aufgabe stellst.</p>
+</li>
+<li>
+<p>Rolle festlegen: Definiere, wie ChatGPT mit dir interagieren soll.</p>
+</li>
+<li>
+<p>Aufgabe präzisieren: Was genau soll ChatGPT tun?</p>
+</li>
+<li>
+<p>Format, Stil und Länge bestimmen: Klare Vorgaben helfen, das gewünschte Ergebnis zu erhalten.</p>
+</li>
+</ul>
+<pre><code>Wir sind eine lokale Agentur für Dog Sitting. 
+Dazu bringen wir berufstätige Hundebesitzer mit Rentnern zusammen.
+
+Du bist mein Marketing-Berater.
+
+Erstelle 10 Ideen für Werbe-Postkarten.
+
+Beschreibe das Bild und den Werbespruch.
+Ausgabe als Tabelle.
+</code></pre>
+<p>Chat bedeutet Dialog, du gelangst am besten in In mehreren Schritten zum Ergebnis. Dein erster Prompt und die erste Antwort sind der Startpunkt und nicht das Ergebnis. </p>
+<p>Nutze den ersten Wurf, um im Dialog eigene Ideen einzubringen, wie im folgenden Beispiel, das den Dialog von oben fortführt:</p>
+<pre><code>Wir wollen mit der Aktion vor allem die 
+berufstätigen Hundebesitzer in den Mittelpunkt stellen.
+Erstelle die 10 Vorschläge neu.
+</code></pre>
+<p>Oder einfach:</p>
+<pre><code>kürzer.
+</code></pre>
+<h2 id="neues-thema-neuer-chat">Neues Thema, neuer Chat</h2>
+<p>ChatGPT merkt sich den Kontext eines Chats – mischst du verschiedene Themen, entsteht Chaos. Ohne klare Trennung kann die KI falsche Verknüpfungen machen, und deine Antworten werden unpräzise. Also beginne ein neues Thema in einem neuen Chat.</p>
+<p>Du kannst auch einfach innerhalb eines Threads neu starten, wenn du merkst, dass die Richtung noch nicht stimmt.</p>
+<pre><code>Vergiss den Verlauf des Chats. Wir starten neu.
+</code></pre>
+<h2 id="automatisierte-texterstellung">Automatisierte Texterstellung</h2>
+<p>Texte folgen Mustern. Eine Pressemitteilung sieht aus wie andere Pressemitteilungen. Eine Produktbeschreibung folgt klaren Regeln. Menschen haben diese Strukturen über Jahre und Jahrhunderte entwickelt. Sie entsprechen unseren Denkweisen und Kommunikationsbedürfnissen.</p>
+<p>ChatGPT hat Milliarden von Texten analysiert. Es erkennt diese Muster. Es versteht, wie Texte aufgebaut sind. Dieses Wissen kannst du nutzen. Du kannst Texte in einem bestimmten Format erstellen und mit neuen Informationen anreichern.</p>
+<p>Doch Vorsicht: Der Kontext entscheidet. ChatGPT gibt dir zurück, was du vorgibst. Deine Anweisungen bestimmen die Klarheit, Tiefe und Genauigkeit des Ergebnisses.</p>
+<p>Die Verantwortung bleibt bei dir. Ein gutes Werkzeug erleichtert die Arbeit, aber es nimmt dir nicht das Denken ab. Wenn du präzise formulierst, bekommst du bessere Texte. Wenn du ungenau bist, bleibt auch das Ergebnis unklar.</p>
+<p>Nutze ChatGPT als Verstärker, nicht als Ersatz. Setze klare Ziele. Gib einen festen Rahmen vor. Dann entstehen Texte, die überzeugen.</p>
+<p>Hier sind einige Beispiele für Textformate als Anregung:</p>
+<ul>
+<li><strong>Bericht</strong> – Detaillierte Analyse oder Zusammenfassung eines Themas  </li>
+<li><strong>Blogartikel</strong> – Strukturiert, informativ und oft mit persönlichem Ton  </li>
+<li><strong>Instagram-Post</strong> – Kurz, prägnant, oft mit Call-to-Action oder Hashtags  </li>
+<li><strong>LinkedIn-Beitrag</strong> – Fachlich fundiert, zielgerichtet für ein Business-Publikum  </li>
+<li><strong>Pressemitteilung</strong> – Formaler Text für Unternehmens- oder Produktneuheiten  </li>
+<li><strong>Produktbeschreibung</strong> – Verkaufsstarker Text mit Fokus auf Vorteile und Nutzen  </li>
+<li><strong>E-Mail</strong> – Von geschäftlichen Mails bis hin zu Newslettern  </li>
+<li><strong>Werbeanzeige</strong> – Kurzer, prägnanter Copytext für Online- oder Printwerbung  </li>
+<li><strong>Skript für YouTube oder Podcast</strong> – Dialogorientiert, unterhaltsam oder informativ  </li>
+<li><strong>Geschäftsplan</strong> – Detaillierte Struktur für Unternehmensstrategie und Wachstum  </li>
+<li><strong>Erklärtext</strong> – Einfache, verständliche Darstellung komplexer Themen  </li>
+<li><strong>Storytelling-Text</strong> – Emotionale Geschichten für Marketing oder persönliche Erzählungen  </li>
+<li><strong>Twitter/X-Post</strong> – Maximal 280 Zeichen, direkt auf den Punkt  </li>
+<li><strong>Facebook-Post</strong> – Mischung aus informativ, unterhaltsam und interaktiv  </li>
+<li><strong>Buchzusammenfassung</strong> – Kurzfassung von Kernideen eines Buches  </li>
+<li><strong>Gedicht oder Songtext</strong> – Kreativer Text mit Rhythmus und Stimmung  </li>
+<li><strong>Dialog oder Rollenspiel</strong> – Gesprächsartige Texte für Szenarien oder Simulationen  </li>
+<li><strong>Checkliste</strong> – Strukturiert mit To-Dos oder Tipps zu einem Thema  </li>
+<li><strong>FAQ (Häufig gestellte Fragen)</strong> – Fragen und Antworten zu einem spezifischen Thema  </li>
+<li><strong>Rezension oder Testbericht</strong> – Kritische Bewertung eines Produkts oder einer Dienstleistung  </li>
+</ul>
+<p>Hier ist ein Beispiel zum Ausprobieren:</p>
+<pre><code>Wir sind eine lokale Agentur für Dog Sitting. 
+Dazu bringen wir berufstätige Hundebesitzer mit Rentnern als Dog Sitter zusammen.
+Unsere Leistungen für Hundebesitzer sind:
+- Vermittlung von Dog Sittern
+- Terminplanung mit Dog Sittern 
+- Organisation von Vertretung, kurzfristig oder länger geplant
+
+Erstelle eine formale Leistungsbeschreibung, die Teil eines Vertrages sein kann.
+</code></pre>
+<p>In diesem Beispiel holt ChatGPT viele zusätzliche Inhalte aus den Trainingsdaten. Wir sind eben nicht der erste Dog Sitter auf dem Planeten.</p>
+<h2 id="erstellung-von-texten-fur-eine-zielgruppe">Erstellung von Texten für eine Zielgruppe</h2>
+<p>Texte und Inhalte sind wirksam, wenn sie den spezifischen Zielgruppenmerkmalen und Anforderungen entsprechen. Du kannst die Fähigkeiten von ChatGPT nutzen, um Texte zielgruppengerecht zu erstellen.</p>
+<pre><code>Warum gab es in Köln Römer?
+Erkläre für Kindergarten-Kinder.
+</code></pre>
+<pre><code>Warum gab es in Köln Römer?
+Erkläre für Teilnehmer einer Kulturreise, die alles genau wissen wollen.
+</code></pre>
+<p>Diese Beispiele bauen komplett auf den Trainingsdaten des Modells auf. Im nächsten Kapitel geht es um deine eigenen Texte.</p>
+<h2 id="umformulieren-und-neustrukturierung-eigener-texte">Umformulieren und Neustrukturierung eigener Texte</h2>
+<p>Sprache formt dein Denken. Wenn du klar schreibst, denkst du klar. Wenn deine Sätze schwammig sind, sind deine Gedanken es auch. Schreiben ist kein bloßes Aufschreiben von Worten. Es ist ein Prozess, in dem du deine Ideen ordnest, Fehler erkennst und präzisierst, was du wirklich meinst.</p>
+<p>ChatGPT kann dir helfen. Es kann Vorschläge machen, Texte umformulieren, Stil verbessern. Aber es darf dich nicht ersetzen. Wenn du das Umschreiben auslagerst, verlierst du eine entscheidende Fähigkeit: den Kampf mit deinen eigenen Gedanken.</p>
+<p>Gute Texte entstehen nicht beim ersten Versuch. Sie entstehen durch Überarbeitung. Jedes Wort zählt. Jede Formulierung hat eine Wirkung. Wenn du bewusst über deine Sprache nachdenkst, wirst du nicht nur ein besserer Schreiber, sondern auch ein besserer Denker.</p>
+<p>Aber ChatGPT ist wirklich gut darin, einen etwas chaotischen Text in eine Reihenfolge zu bringen und lesefreundlich zu formulieren. Häufig, wie bei technischen Texten, geht es nicht um Indivdualität des Denkens und geistreiche Formulierungen, sondern darum, einen Sachverhalt schnell auf den Punkt zu bringen. Dann stört es auch nicht, wenn der Text vielleicht doch ein bißchen nach KI aussieht.</p>
+<p>Hier ist ein einfaches Beispiel mit einem etwas chaotischen Schülertext zum Ausprobieren:</p>
+<pre><code>Nutze nur den nachfolgenden Text, nicht deine Trainingsdaten.
+Schreibe den Text um. 
+
+Bringe die Aussagen in eine logische Reihenfolge und 
+formuliere lesefreundlich, in kurzen Sätzen.
+===
+Die Römer in Köln
+
+Die Römer hatten eine große Armee und bauten viele Straßen. In Köln gab es auch eine Stadtmauer. Sie hatten Thermen und Wasserleitungen, um Wasser in die Stadt zu bringen. Bevor die Römer da waren, lebten dort die Ubier, ein germanischer Stamm.
+
+Die Römer kamen nach Köln, weil sie eine Stadt gründen wollten. Rom war ihr großes Reich und sie eroberten viele Gebiete. Köln war eine „Colonia“, was bedeutet, dass es eine römische Stadt war. Die Römer hatten viele Götter und bauten Tempel für sie.
+
+Handel war sehr wichtig, und viele Menschen lebten dort. Sie hatten Straßen, die bis nach Rom führten. Später wurde Köln eine große Stadt mit vielen Gebäuden. Heute kann man noch alte Mauern und römische Fundstücke sehen.
+
+Die Römer regierten lange Zeit, aber irgendwann war das Römische Reich vorbei. Trotzdem gibt es noch viele Dinge, die von den Römern stammen. Ihre Armee war stark, und sie hatten viele Gesetze. Köln blieb aber eine Stadt, auch als die Römer nicht mehr da waren.
+===
+</code></pre>
+<h2 id="strukturierte-ausgabe">Strukturierte Ausgabe</h2>
+<blockquote>
+<p>ChatGPT bietet neben normalen Texten auch die Möglichkeit, Ausgaben in strukturierten Formaten darzustellen, um eine bessere Übersichtlichkeit und Anpassung an verschiedene Anwendungsfälle zu gewährleisten.</p>
+</blockquote>
+<p>Erprobte Formate sind:</p>
+<ul>
+<li>Tabelle</li>
+<li>Liste</li>
+<li>Bulletpoints, kurz</li>
+<li>Markdown </li>
+<li>HTML </li>
+<li>JSON </li>
+<li>CSV </li>
+</ul>
+<p>Beispiel:</p>
+<pre><code>An welchen Orten hat Henri Matisse wann gelebt?
+Erstelle eine Tabelle mit den Spalten Wohnort und Zeitraum.
+</code></pre>
+<h2 id="feedback-und-korrektur">Feedback und Korrektur</h2>
+<h2 id="extrahieren-und-filtern-von-informationen-aus-texten">Extrahieren und Filtern von Informationen aus Texten</h2>
+<p>ChatGPT kann dir helfen, Informationen aus Texten zu extrahieren. </p>
+<p>Nachfolgend ein Bericht eines Vloggers aus der hypothetischen Stadt Sumpfrath.
+Ziel ist es, eine Liste aller Orte zu erstellen, die der Vlogger besucht hat, und eine Liste aller Personen, die er getroffen hat.</p>
+<p>Hier das Beispiel:</p>
+<pre><code>hier ist ein Text über einen Besuch eine Vloggers in einer Stadt.
+
+Analysiere den Text und 
+erstelle eine Liste aller Orte, die der Vlogger besucht hat.
+
+===
+Die Kamera wackelt leicht, als der Vlogger durch die schmalen Straßen von Sumpfrath läuft. „So Leute, willkommen in Sumpfrath. Ich hab keine Ahnung, was es hier gibt, aber wir finden’s raus.“ Die Stadt wirkt ruhig, fast zu ruhig. Ein paar ältere Leute sitzen auf einer Bank am Marktplatz, der von einer Litfaßsäule dominiert wird, deren Plakate längst vergilbt sind. Ein alter Brunnen steht in der Mitte, ohne Wasser.
+
+Ein Mann mit Schiebermütze und dickem Pullover sitzt auf der Bank und beobachtet die Straße, als wäre es seine tägliche Aufgabe. Der Vlogger hält die Kamera auf ihn. „Moin! Gibt’s hier was Spannendes?“ Der Mann, Erwin, 78 Jahre alt, zuckt mit den Schultern. „Früher hatten wir mal ‘nen Bäcker. Jetzt nicht mehr. Aber der Döner hier ist okay.“ Der Vlogger nickt langsam. „Gut zu wissen.“
+
+Er schlendert weiter, die Straßen sind schmal, und ab und zu fährt ein Fahrrad vorbei. Google Maps hatte ihm einen Aussichtspunkt namens „Rheinblick“ empfohlen, doch als er dort ankommt, gibt es keinen Rhein, nur einen Parkplatz und eine alte Holzbank, die schief steht. Eine Frau, Anfang vierzig, sitzt dort mit einem Notizbuch auf dem Schoß. Er spricht sie an. „Schreibst du was?“ Sie nickt. „Gedichte. Die Stille hier inspiriert mich.“ Sie blättert auf eine neue Seite. „Hör mal: ‚Ein Tropfen fällt, ins weite Nichts, ein stilles Echo meines Ichs.‘“ Der Vlogger schweigt kurz. „Cool. Aber… warum heißt das hier Rheinblick?“ Die Frau seufzt. „Früher konnte man den Rhein sehen. Dann haben sie da vorne Bäume gepflanzt.“ Er zoomt mit der Kamera auf die dichte Baumreihe. „Okay. Also wenn ihr mal nichts sehen wollt – das ist der perfekte Spot.“
+
+Er folgt einer Nebenstraße, die laut Google Maps zum „Kulturzentrum“ führt. Die Kamera schwenkt über ein kleines, graues Gebäude mit einem handgeschriebenen Schild: „Heute: Schachabend“. Er geht rein. An einem Tisch sitzt ein junger Mann mit Hoodie, der konzentriert auf ein Schachbrett starrt. „Moin, was geht?“ fragt der Vlogger. „Schach.“ Der junge Mann, Kevin, 27, deutet auf den leeren Platz ihm gegenüber. „Willst du spielen?“ Der Vlogger überlegt kurz. „Ich verliere in drei Minuten.“ Kevin grinst. „Wahrscheinlich.“ Der Vlogger lehnt sich zurück. „Lass lieber. Aber ich film mal kurz das spannendste Kultur-Event in Sumpfrath.“ Kevin lacht. „Falls du mal Schach-Memes brauchst, sag Bescheid.“
+
+Wieder draußen folgt er einem weiteren Google-Hinweis: „Alter Turm – historisches Wahrzeichen.“ Die Kamera zeigt eine Wiese, ein paar Steine, ein verwittertes Schild. „Hier stand mal der alte Turm von Sumpfrath.“ Der Vlogger schweigt. „Okay. Ich glaub, wir haben das Highlight gefunden.“
+
+Als er schließlich zurück zum Marktplatz geht, bleibt er noch einmal vor dem Dönerladen stehen. Erwin sitzt noch immer auf der Bank und nickt ihm zu. „Der Döner ist echt okay, weißte?“ Der Vlogger grinst. „Gut, dann teste ich den jetzt. Sonst hat Sumpfrath mich nämlich komplett verloren.“
+
+Die Kamera wackelt leicht, während er in den Döner beißt. Er hält kurz inne, kaut langsam, dann nickt er. „Leute… der Döner ist okay.“ Er hebt die Kamera für einen letzten Blick auf den stillen Marktplatz. „Das war’s aus Sumpfrath. Ich glaub, ich komm nie wieder. Aber falls ihr einen Ort sucht, an dem einfach nichts passiert – ihr wisst, wo ihr ihn findet.“ Dann endet das Video.
+===
+</code></pre>
+<p>Jetzt die Frage nach den Personen:</p>
+<pre><code>Erstelle eine Liste der Personen, die der Vlogger getroffen hat
+</code></pre>
+<h2 id="weltwissen-erklarung-von-komplexen-konzepten-und-zusammenhangen">Weltwissen: Erklärung von komplexen Konzepten und Zusammenhängen</h2>
+<p>ChatGPT hat in seinen Trainingsdaten eine unvorstellbare Menge von Informationen gesammelt. Die Wahrscheinlichkeit ist sehr groß, dass du etwas verstehen möchtest, was schon tausende Male in unterschiedlichen Ansätzen und Detailtiefen beschrieben wurde. </p>
+<p>Die folgende Tabelle gibt einen Überblick über die Trainingsdaten im Modell und eine Einschätzung der Zuverlässigkeit dieses Wissens.</p>
+<table>
+<thead>
+<tr>
+<th>Wissensart</th>
+<th>Beschreibung</th>
+<th>Zuverlässigkeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sprachliches Wissen</td>
+<td>Sprachkonzepte, Grammatik und Syntax für verschiedene Sprachen, Übersetzung</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td>Allgemeines Wissen</td>
+<td>Informationen zu gängigen Themen wie Geschichte, Geografie, Wissenschaft und Popkultur</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td>Kulturelles Wissen</td>
+<td>Wissen über allgemeine kulturelle Themen, Literatur, Kunst und Traditionen</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td>Management Wissen</td>
+<td>Vorgehensmodelle für Strategiefindung, Priorisierung, Kriterienbewertung, Stärken/Schwächen, Marketing usw.</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td>Technisches Wissen</td>
+<td>Konzepte aus IT, Programmierung, Mathematik und Technik, die häufig in Dokumentationen vorkommen</td>
+<td>Mittel-Hoch</td>
+</tr>
+<tr>
+<td>Wissenschaftliches Wissen</td>
+<td>Konzepte aus Physik, Chemie, Biologie, die in Bildungsliteratur zu finden sind</td>
+<td>Mittel-Hoch</td>
+</tr>
+<tr>
+<td>Wirtschaftliches Wissen</td>
+<td>Grundlagen der Wirtschaft, allgemeine Marktprinzipien und häufige Theorien</td>
+<td>Mittel-Hoch</td>
+</tr>
+<tr>
+<td>Rechtliches Wissen</td>
+<td>Allgemeine rechtliche Prinzipien und Gesetze, basierend auf öffentlich zugänglichen Quellen</td>
+<td>Mittel (Vorsicht!)</td>
+</tr>
+<tr>
+<td>Medizinisches Wissen</td>
+<td>Grundlagen der Medizin und Gesundheit, ohne tiefergehende Fachkenntnis</td>
+<td>Mittel (Vorsicht!)</td>
+</tr>
+<tr>
+<td>Ratgeber Wissen</td>
+<td>Tourismus, Rezepte, Fitness, Erziehung, Reparaturen, Tipps und Tricks</td>
+<td>Mittel-Hoch (Vorsicht!)</td>
+</tr>
+<tr>
+<td>Spezifisches Expertenwissen</td>
+<td>Wissen aus hochspezialisierten Bereichen (z.B. Quantentechnologie, spezialisierte Wirtschaftsthemen)</td>
+<td>Niedrig</td>
+</tr>
+</tbody>
+</table>
+<p>Um die Qualität der Trainingsdaten zu einer Frage einzuschätzen, kann man sich folgende Punkte überlegen:
+- Wieviele Menschen auf der Welt haben sich diese Frage bereits gestellt?
+- Wie viel wurde über das Thema geschrieben und ist frei zugänglich?
+- Sind die meisten Autoren dazu Experten, Laien oder Meinungsmacher?
+- Gibt es kontroverse Meinungen dazu?
+- Gibt es eingeschränkte Zeiträume, in den die Information gilt (z.B. Gesetze ändern sich immer wieder)?</p>
+<p>Fragen zu Nischenthemen führen heute noch zu Halluzinationen, z.B. Anwendungsfragen zu einem Tool, das nur von wenigen 1000 Nutzern eingesetzt wird. </p>
+<p>Hier ein paar Beispiel-Fragen für Erklärungen:</p>
+<pre><code>Erkläre mir [KONZEPT].
+</code></pre>
+<pre><code>Wie funktioniert [X] genau?
+</code></pre>
+<pre><code>Wozu ist das gut?
+</code></pre>
+<pre><code>Gib mir ein Beispiel für [X].
+</code></pre>
+<pre><code>Was ist der Zusammenhang von [A] und [B]?
+</code></pre>
+<p>Wenn du mit den Antworten noch nicht zufrieden bist, gib Kontext:</p>
+<pre><code>Ich bin Software-Ingenieur und 
+kenne die Grundlagen von TCP/IP in der Kommunikation von physischen IT-Systemen. 
+
+Erkläre mir die Kommunikation zwischen zwei Pods in einem Cluster in Kubernetes.
+</code></pre>
+<h2 id="ergebnisoffene-fragen-statt-suggestivfragen">Ergebnisoffene Fragen statt Suggestivfragen</h2>
+<p>Stelle deine Fragen ergebnisoffen und vermeide Suggestivfragen, in denen die Tendenz der Antwort bereits feststeht.</p>
+<p>Beispiel für eine Suggestivfrage:</p>
+<pre><code>Warum ist Cholesterin in Lebensmitteln schlecht für mich?
+</code></pre>
+<p>Beispiel für eine offene Frage:</p>
+<pre><code>welche verschiedenen Positionen gibt es zu Cholesterin in Lebensmitteln?
+</code></pre>
+<h2 id="faktencheck">Faktencheck</h2>
+<p>Du kannst ChatGPT um nachprüfbare Fakten und Referenzen fragen. Das funktioniert schon irgendwie, aber man sollte nicht zuviel erwarten. Teilweise habe ich Referenzen auf Fachbücher erhalten, bei denen ich mich frage, wie dieses legal vom Modell verwendet werden können.  </p>
+<p>Beispiel zum Ausprobieren:</p>
+<pre><code>gib mir eine Liste von nachprüfbaren Fakten und Referenzen 
+zu deinen Aussagen über Cholesterin
+</code></pre>
+<p>Nach meinem Verständnis enthält ein Modell wie GPT-4o selbst keine Quellenangaben. Das heisst, dass ChatGPT bei der Abfrage nach diesen Informationen sucht wie eine Suchmaschine. Hier liefert meines Erachtens heute (Anfang 2025) das Tool perplexity.ai noch bessere Ergebnisse, auch wenn es genauso funktioniert.</p>
+<h2 id="rollenspiele">Rollenspiele</h2>
+<h2 id="vorgehensmodelle-im-dialog-chatgpt-stellt-dir-fragen">Vorgehensmodelle im Dialog - ChatGPT stellt dir Fragen</h2>
+<p>Es gibt unzählige Ratgeber und Methodenbücher zu fast jedem erdenklichen Thema. Sie bieten vorgefertigte Modelle, die dich Schritt für Schritt von einem Problem zur Lösung führen. Doch das reine Lesen eines solchen Buches macht dich nicht automatisch kompetent. Wissen muss angewendet werden – und genau hier kann ChatGPT als dein Werkzeug dienen. </p>
+<p>Ein echter Dialog mit ChatGPT geht weit über das hinaus, was du allein auf Papier erarbeiten könntest. Durch gezielte Fragen, Reflexion und iterative Anpassungen kommst du zu Erkenntnissen, die ohne diesen dynamischen Prozess verborgen blieben. </p>
+<p>Beginne, indem du ChatGPT nach einem geeigneten Vorgehensmodell fragst. Hier ein Beispiel:</p>
+<pre><code>Wir sind eine lokale Agentur für Dog Sitting. 
+Dazu bringen wir berufstätige Hundebesitzer mit Rentnern zusammen.
+
+Agiere als mein Experte für Markenentwicklung. 
+
+Welche Schritte sind notwendig, um eine spezifische Marke 
+für meine Dogsitting-Agentur zu entwickeln?
+</code></pre>
+<p>Probiere das aus. Das Ergebnis wird eine Menge Schritte umfassen. Doch genau das ist der Punkt. Du wirst dich durch jedes Thema arbeiten, tief in die Materie eintauchen, Klarheit gewinnen. Und mit jeder Antwort wird ChatGPT deine Aufgabenstellung und deine individuellen Herausforderungen besser verstehen. </p>
+<p>ChatGPT 4o verfügt pro Chat über ein Gedächtnis (Kontextfenster) von 128k Token – das entspricht mindestens 240 Seiten Text. Nutze dieses Potenzial. Arbeite schrittweise durch jedes Thema, beginnend mit dem ersten Schritt: <strong>Zielgruppenanalyse.</strong></p>
+<pre><code>Hilf mir, die Themen einzeln zu analysieren. 
+Wir beginnen mit dem Thema &quot;Analyse der Zielgruppe&quot;.
+Stelle mir dazu Fragen, bis du genügend Informationen hast. 
+Dann fasse das Ergebnis zusammen.
+</code></pre>
+<p>Du kannst nun tiefer in die Materie eintauchen, ChatGPT zu weiteren Fragen auffordern oder selbst eine präzisierte Version deiner Zielgruppe definieren:</p>
+<pre><code>Danke für dein Ergebnis. 
+Ich lege jetzt die Zielgruppe im nachfolgenden Text fest:
+===
+... dein angepasster Text
+===
+</code></pre>
+<p>Durch diesen interaktiven Prozess kann ChatGPT dich sogar auf Widersprüche oder Unklarheiten in deinem eigenen Text hinweisen. Das Ziel ist nicht, nur eine Antwort zu bekommen, sondern durch systematisches Denken eine tragfähige, durchdachte Strategie zu entwickeln. Wenn du den Prozess ernst nimmst, wirst du dich selbst überraschen mit dem, was du in der Lage bist zu erarbeiten.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

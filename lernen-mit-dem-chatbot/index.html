@@ -1,0 +1,643 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chatbots-richtig-nutzen/">
+      
+      
+        <link rel="next" href="../wie-funktioniert-ein-chatbot-llm/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Lernen mit dem Chatbot - ki-und-kopfarbeit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lerndialog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ki-und-kopfarbeit" class="md-header__button md-logo" aria-label="ki-und-kopfarbeit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ki-und-kopfarbeit
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lernen mit dem Chatbot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ki-und-kopfarbeit" class="md-nav__button md-logo" aria-label="ki-und-kopfarbeit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ki-und-kopfarbeit
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatbots-richtig-nutzen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chatbots richtig nutzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lernen mit dem Chatbot
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lernen mit dem Chatbot
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lerndialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lerndialog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schlusselbegriffe-und-kategorien" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schlüsselbegriffe und Kategorien
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sokratische-dialoge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sokratische Dialoge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erklarungen-von-einfach-bis-akademisch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erklärungen von einfach bis akademisch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubungsfragen-erstellen-und-uberprufen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übungsfragen erstellen und überprüfen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-als-kontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload als Kontext
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analogien-und-beispiele" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analogien und Beispiele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#klassifizierung-ursache-wirkung-erklarung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Klassifizierung, Ursache-Wirkung, Erklärung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feynman-methode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feynman-Methode
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wie-funktioniert-ein-chatbot-llm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wie funktioniert ein Chatbot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../impressum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Impressum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datenschutz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datenschutzerklärung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Lernen mit dem Chatbot</h1>
+
+<p>Lernen ist kein bloßes Konsumieren von Informationen. Es ist ein Kampf – gegen Unwissenheit, gegen Verwirrung, gegen die eigene Trägheit. Wissen muss errungen werden. Es muss durchdrungen, geprüft und verknüpft werden. Sonst bleibt es bedeutungslos.</p>
+<p>Aber wo fängt man an? Was ist wirklich wichtig? Ein neues Thema zu erfassen, ist wie der Versuch, Ordnung ins Chaos zu bringen. Und genau hier kann ein KI-gestützter Chatbot als Werkzeug dienen. Er hilft dir, Struktur zu schaffen:</p>
+<ul>
+<li>
+<p>Er identifiziert Kernkonzepte, damit du dich auf das Wesentliche konzentrieren kannst.</p>
+</li>
+<li>
+<p>Er passt Erklärungen an dein Wissen und deine Ziele an.</p>
+</li>
+<li>
+<p>Er stellt gezielte Fragen, die dich zum Denken zwingen.</p>
+</li>
+<li>
+<p>Er nutzt bewährte Methoden wie den Sokratischen Dialog oder die Feynman-Technik, um dein Verständnis zu vertiefen.</p>
+</li>
+</ul>
+<p>Wenn ich von KI-Chatbots spreche, meine ich Systeme wie ChatGPT, Copilot, Claude oder Gemini. Die Prompts sind mit ChatGPT 4o getestet.</p>
+<p>Dieses Kapitel zeigt dir, wie du mit einem KI-Chatbot arbeitest, um dein Lernen zu optimieren. Der Schlüssel liegt in der bewussten Auseinandersetzung mit dem Thema – durch klare Fragestellungen, strukturiertes Denken und tiefgehende Reflexion.</p>
+<p>Du willst nicht nur wissen. Du willst verstehen. Und du willst handeln. Lass uns beginnen.</p>
+<h2 id="lerndialog">Lerndialog</h2>
+<p>Lernen beginnt mit Klarheit. Wenn du dich einem neuen Thema widmest, brauchst du Struktur. Ohne sie wirst du von der Komplexität überwältigt. Setze einen klaren Rahmen. Definiere dein Ziel. Erkenne, wo du stehst. Nur dann kannst du sinnvoll voranschreiten.</p>
+<p>Nutze den KI-Chatbot als Werkzeug, nicht als Krücke. Gib ihm Kontext: Was weißt du bereits? Wohin willst du? Präzise Fragen führen zu präzisen Antworten. Und Präzision ist der Schlüssel zum Verstehen.</p>
+<p>Starte jedes neue Thema mit einem frischen Thread. Warum? Weil dein Lerndialog ein wachsendes Fundament bildet. Jede Frage, jede Antwort fügt Kontext hinzu, den der KI-Chatbot nutzt, um dich gezielt voranzubringen. Doch wenn du verschiedene Themen in einem Thread vermischst, verliert der Chatbot die Klarheit – und dein Lernprozess wird ineffizient. Halte die Struktur sauber, damit du das Beste aus deinem Dialog herausholst.</p>
+<pre><code>Du bist mein Trainer. Ich möchte [THEMA] erlernen. 
+Mein Lernziel ist [LERNZIEL]. 
+Ich verfüge über das folgende Wissen als Grundlage: 
+- ...
+
+Erstelle eine Liste der Schlüsselkonzepte, 
+die ich kennen und verstehen sollte. 
+Wähle die Schlüsselkonzepte nach dem Pareto-Prinzip (20/80) aus. 
+</code></pre>
+<p>Jetzt beginnt der eigentliche Lernprozess. Aber sei aktiv. Warte nicht nur auf Antworten. Stelle Fragen – präzise, herausfordernde, zielgerichtete Fragen. Dein KI-Chatbot ist kein passiver Informationslieferant. Er ist dein Dialogpartner. Nutze ihn, um deine Denkweise zu schärfen.</p>
+<pre><code>Erkläre mir [KONZEPT].
+</code></pre>
+<pre><code>Wie funktioniert [X] genau?
+</code></pre>
+<pre><code>Wozu ist das gut?
+</code></pre>
+<pre><code>Gib mir ein Beispiel für [X].
+</code></pre>
+<pre><code>Was ist der Zusammenhang von [A] und [B]?
+</code></pre>
+<p>Lernen ist kein Konsum, sondern ein Kampf um Bedeutung. Wenn du die richtigen Fragen stellst, wirst du nicht nur Wissen ansammeln – du wirst es begreifen und nutzen können.</p>
+<h2 id="schlusselbegriffe-und-kategorien">Schlüsselbegriffe und Kategorien</h2>
+<p>Sprache ist die Struktur unseres Denkens. Wenn du ein Thema verstehen willst, musst du die Begriffe begreifen, die es formen. Konzepte sind keine bloßen Wörter – sie sind Werkzeuge, um Ordnung im Chaos zu schaffen. Aber oft sind Texte komplex, und es ist schwer, sofort die zentralen Ideen herauszufiltern.</p>
+<p>Hier kann dein KI-Chatbot als ein erster Kompass dienen. Er gibt dir eine Richtung, eine Grundlage. Doch die eigentliche Arbeit bleibt bei dir: Begriffe zu hinterfragen, Zusammenhänge zu erkennen, Bedeutungen zu durchdringen. </p>
+<pre><code>## Artikel zu einem Thema hochladen, dann
+Gib mir eine Liste der 20 Schlüsselbegriffe in diesem Artikel 
+und gliedere sie in 5 Kategorien
+</code></pre>
+<pre><code>## Artikel zu einem Thema hochladen, dann 
+Gib mir eine Liste der 20 Kernaussagen in diesem Artikel 
+und gliedere sie in 5 Kategorien
+</code></pre>
+<h2 id="sokratische-dialoge">Sokratische Dialoge</h2>
+<p>Die sokratische Methode ist kein bloßes Abfragen von Wissen – sie ist eine intellektuelle Disziplin. Sie zwingt dich, Annahmen zu prüfen, anstatt sie einfach zu akzeptieren. Wahres Verstehen entsteht nicht durch das passive Aufnehmen von Informationen, sondern durch das aktive Ringen mit Fragen.</p>
+<ul>
+<li>
+<p>Lernen durch Fragen – Wissen entsteht nicht durch blinde Belehrung, sondern durch gezielte, durchdachte Fragen.</p>
+</li>
+<li>
+<p>Zerbricht falsche Annahmen – Jede Aussage muss hinterfragt, jede Behauptung überprüft werden.</p>
+</li>
+<li>
+<p>Ein strukturierter Dialog – Fortschritt entsteht durch den Austausch zwischen Fragendem und Antwortendem.</p>
+</li>
+<li>
+<p>Erkenntnis in Stufen – Jede Frage baut auf der vorherigen auf, sodass tiefes Verständnis entsteht.</p>
+</li>
+</ul>
+<p>Nutze deinen KI-Chatbot nicht als Antwortmaschine, sondern als sokratischen Mentor. Lasse dich von seinen Fragen herausfordern, zwinge dich zum präzisen Denken – und baue dir so dein Wissen selbst auf.</p>
+<pre><code>Du bist mein sokratischer Lehrer. 
+Hilf mir, das Konzept &quot;[KONZEPT]&quot; zu verstehen. 
+Stelle mir Fragen, die mich beim Verständnis leiten. 
+Führe einen Dialog mit mir: 
+Du stellst mir eine Frage, ich antworte, usw.
+</code></pre>
+<h2 id="erklarungen-von-einfach-bis-akademisch">Erklärungen von einfach bis akademisch</h2>
+<p>Du kannst deinen KI Chatbot anweisen, dir etwas auf verschiedenen Leveln zu erklären. Das hilft beim Verständnis einzelner Konzepte, kann aber nicht das aktive Arbeiten mit den Themen ersetzen. </p>
+<pre><code>Erkläre das Konzept &quot;[KONZEPT]&quot; 
+für einen Grundschüler, 
+für einen Abiturienten und 
+für einen Studenten.
+</code></pre>
+<h2 id="ubungsfragen-erstellen-und-uberprufen">Übungsfragen erstellen und überprüfen</h2>
+<p>Lasse dir Übungsfragen erstellen und lasse deinen KI Chatbot die Antwort überprüfen. Das funktioniert sehr gut in einem längeren Lerndialog, dann kennt der KI Chatbot die Themen und deinen Wissenslevel schon aus dem Kontext des Chats.  </p>
+<pre><code>## in einem Lerndialog
+Stelle mir 10 Übungsfragen zu &quot;[THEMA]&quot;.
+</code></pre>
+<pre><code>Hier ist meine Antwort zu Frage 1. 
+Überprüfe meine Antwort, korrigiere falsche und unklare Aussagen. 
+Weise mich auf Lücken hin.
+</code></pre>
+<p>"Übungsfragen" ist sehr allgemein. Es könnte hilfreich sein, die Art der Fragen genauer anzugeben.</p>
+<pre><code>Hier sind Definitionen verschiedener Aufgabentypen nach Bloom's Taxonomie
+- Wissensaufgaben (Remember) – Fakten und Begriffe auswendig lernen
+- Verständnisaufgaben (Understand) – Konzepte in eigenen Worten erklären
+- Anwendungsaufgaben (Apply) – Gelerntes in neuen Situationen nutzen
+- Analyseaufgaben (Analyze) – Zusammenhänge und Strukturen erkennen
+- Evaluierungsaufgaben (Evaluate) – Eine begründete Meinung entwickeln
+- Gestaltungsaufgaben (Create) – Neues Wissen generieren und kreativ umsetzen
+
+Stelle mir 10 Verständnisaufgaben zu &quot;[THEMA]&quot;.
+</code></pre>
+<h2 id="upload-als-kontext">Upload als Kontext</h2>
+<p>Kontext ist der Schlüssel, damit du zielgerichtete Fragen erhältst. Gib deinem KI Chatbot ein Skript per Upload, oder kopiere ein Kapitel in den Chat als Basis für die Fragen. Das Kontextfenster bei ChatGPT-4o hat eine Größe von 128k, das sind über 240 Seiten Text.</p>
+<pre><code>Hier ist ein Kapitel über &quot;[THEMA]&quot;. Agiere als mein Lehrer und stelle mir 10 einfache Übungsfragen, um das Thema kennenzulernen.
+===
+[TEXT]
+===
+</code></pre>
+<h2 id="analogien-und-beispiele">Analogien und Beispiele</h2>
+<pre><code>Gib mir Analogien und Beispiele aus der realen Welt, um [KONZEPT] zu verstehen.
+</code></pre>
+<h2 id="klassifizierung-ursache-wirkung-erklarung">Klassifizierung, Ursache-Wirkung, Erklärung</h2>
+<p>Dein KI Chatbot kann dir helfen, die wichtigsten Aussagen in einem Text herauszuarbeiten. </p>
+<ul>
+<li>hierarchische Klassifizierung: "X ist ein Typ von Y"</li>
+<li>Ursache-Wirkung: "K ist die Ursache von L"</li>
+<li>Erklärung: "A erklärt B"</li>
+</ul>
+<pre><code>Erstelle eine Liste der Aussagen in diesem Text im Format 
+&quot;X ist ein Typ von Y&quot;, 
+&quot;K ist die Ursache von L&quot;,
+&quot;A erklärt B&quot;
+Ausgabe als Tabelle mit 3 Spalten.
+</code></pre>
+<h2 id="feynman-methode">Feynman-Methode</h2>
+<p>Die Feynman-Methode ist eine Lernstrategie, die darauf basiert, ein Konzept so einfach zu erklären, dass es selbst ein Anfänger verstehen würde. Sie besteht aus vier Schritten: 
+1. Wähle ein Konzept und schreibe auf, was du darüber weißt. 
+2. Erkläre es so, als würdest du es einem Kind beibringen – ohne Fachbegriffe und möglichst einfach. 
+3. Identifiziere Wissenslücken – wenn du ins Stocken gerätst oder Begriffe nicht ohne weiteres vereinfachen kannst, zeigt das, wo du dein Verständnis vertiefen musst. 
+4. Überarbeite deine Erklärung und mache sie noch klarer, bis du das Konzept mühelos und prägnant darstellen kannst. 
+Durch dieses aktive Lernen wird Wissen gefestigt, verknüpft und langfristig behalten. Wie Feynman selbst sagte: „Wenn du es nicht einfach erklären kannst, hast du es nicht gut genug verstanden.“</p>
+<p>Nutze dafür deinen KI Chatbot, und lass dich von den Antworten überraschen.</p>
+<pre><code>Agiere als ein Zwölfjähriger, dem ich etwas erkläre wie in der Feynman-Methode. 
+Höre mir zu und stelle mit Fragen, wo du Lücken siehst. Gib mir Rückmeldung, wenn es zu kompliziert ist. Wir haben einen Dialog. 
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
