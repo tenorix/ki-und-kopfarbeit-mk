@@ -1,27 +1,7 @@
-## Martin's stuff
+# Home
 
-foobar lsdfkj löaksfj aö3lire asf asklf
-klaös jföalsf j f
-asöld jfalskf jaöskfj 
- asjölf köalskf j
+Durch KI verändert sich die Arbeitswelt rasant. Als Ingenieur, Entwickler, Projektleiter oder Produktmanager müssen wir uns immer weniger mit Details aufhalten. Dafür müssen wir aber umso mehr den Überblick behalten, Probleme für das Management verständlich aufbereiten und strategische Entscheidungen treffen. Genau das fällt vielen Fachexperten schwer.
 
-### sadf sdf 
-asfasf
+Richtig eingesetzt, kann uns KI als persönlicher Assistent genau dabei unterstützen: Probleme strukturieren, Argumente auf den Punkt bringen, Strategien entwickeln. Doch dafür muss man wissen, welche Denkwerkzeuge es gibt und wie man sie mit KI sinnvoll umsetzen kann.
 
-## Welcome to MkDocs
-
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-### Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Auf dieser Website stelle ich hilfreiche Denkwerkzeuge von Projektmanagement, Consulting und Konzeptentwicklung vor – und zeige, wie du sie mit KI in deinem Arbeitsalltag nutzen kannst.
