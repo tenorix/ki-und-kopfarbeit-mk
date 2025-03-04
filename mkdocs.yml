@@ -6,5 +6,6 @@ theme:
 
 nav:
   - Home: index.md
+  - Chatbots richtig nutzen: chatbots-richtig-nutzen.md
   - Fooo: foo.md
 
