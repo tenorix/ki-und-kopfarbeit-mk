@@ -3,7 +3,10 @@ name: Deploy MkDocs
 on:
   push:
     branches:
-      - main  # Change if using another branch
+      - main  # Change if using a different branch
+
+permissions:
+  contents: write  #  This is CRUCIAL for pushing to gh-pages!
 
 jobs:
   deploy:
@@ -15,16 +18,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.9'
+          python-version: '3.x'
 
       - name: Install MkDocs
         run: pip install mkdocs mkdocs-material
 
       - name: Deploy to GitHub Pages
         env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub's built-in token
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/tenorix/ki-und-kopfarbeit.git
-          mkdocs gh-deploy --force
+          mkdocs gh-deploy --force --remote-name origin
